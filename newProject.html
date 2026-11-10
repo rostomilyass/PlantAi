@@ -33,7 +33,7 @@
     <header>
         <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 bg-forest text-bone flex flex-col" aria-label="Sidebar">
             <div class="px-6 pb-6 pt-8">
-                <a href="#" class="font-display text-3xl tracking-tight">Plant<span class="text-seed">AI</span></a>
+                <a href="index.html" class="font-display text-3xl tracking-tight">Plant<span class="text-seed">AI</span></a>
                 <p class="mt-1 text-sm text-lichen/80">Plan it before you build it.</p>
             </div>              
 
@@ -61,6 +61,50 @@
             </div>
         </aside>
     </header>
+    <main class = "ml-64 ">
+        <div class ="w-full max-w">
+            <form class="bg-bone shadow-md rounded px-20 pt-6 pb-8 ">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="projectName">Ton nom de projet : </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="projectName" type="text" placeholder="name project">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="description">Description : </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="description" type="text" placeholder="description">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="duree">Durée (en jours) : </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="duree" type="number" placeholder="durée(en jours)">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="developpeur">Nombre de développeurs : </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="nbrDev" type="number" placeholder="nombre de dev">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="technologieUsed">Technologies utilisées : </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="techUsed" type="text" placeholder="tech utilisées">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="technologieUsed">Niveau de difficulté : </label>
+                    <select class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="diffNiv">
+                        <option value="" disabled selected>Select a level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="briefComplet">Brief complet : </label>
+                    <textarea class="shadow appearance-none border rounded w-full bg-white py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="briefComplet" rows="5" placeholder="Décrivez votre brief complet"></textarea>
+                </div>
+                <div class="flex justify-center">
+                    <button class=" bg-seed hover:bg-seed-100 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Submit
+                    </button>
+                </div>    
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>
