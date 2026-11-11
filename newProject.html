@@ -3,8 +3,8 @@
 <head>
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PlantAI - making your plan from step ona.</title>
-    <meta name="description" content="PlantAI le site où en t'aide planifier ton briefe.">
+    <title>PlanitAI - making your plan from step one.</title>
+    <meta name="description" content="PlanitAI le site où en t'aide planifier ton briefe.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
     <header>
         <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 bg-forest text-bone flex flex-col" aria-label="Sidebar">
             <div class="px-6 pb-6 pt-8">
-                <a href="index.html" class="font-display text-3xl tracking-tight">Plant<span class="text-seed">AI</span></a>
+                <a href="index.html" class="font-display text-3xl tracking-tight">Planit<span class="text-seed">AI</span></a>
                 <p class="mt-1 text-sm text-lichen/80">Plan it before you build it.</p>
             </div>              
 
@@ -58,35 +58,35 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </aside>
     </header>
     <main class = "ml-64 ">
         <div class ="w-full max-w">
-            <form class="bg-bone shadow-md rounded px-20 pt-6 pb-8 ">
+            <form class="bg-bone shadow-md rounded px-20 pt-6 pb-8" data-parsley-validate>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="projectName">Ton nom de projet : </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="projectName" type="text" placeholder="name project">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="projectName" type="text" placeholder="name project" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire.">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="description">Description : </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="description" type="text" placeholder="description">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="description" type="text" placeholder="description" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire.">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="duree">Durée (en jours) : </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="duree" type="number" placeholder="durée(en jours)">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="duree" type="number" placeholder="durée(en jours)" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire."data-parsley-min="1" data-parsley-min-message="il faut au minimum plus d'un jour.">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="developpeur">Nombre de développeurs : </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="nbrDev" type="number" placeholder="nombre de dev">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="nbrDev" type="number" placeholder="nombre de dev" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire." data-parsley-min="1" data-parsley-min-message="il faut au minimum un developpeur">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="technologieUsed">Technologies utilisées : </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="techUsed" type="text" placeholder="tech utilisées">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outilne" id="techUsed" type="text" placeholder="tech utilisées" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire.">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="technologieUsed">Niveau de difficulté : </label>
-                    <select class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="diffNiv">
+                    <select class="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="diffNiv" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire.">
                         <option value="" disabled selected>Select a level</option>
                         <option value="beginner">Beginner</option>
                         <option value="intermediate">Intermediate</option>
@@ -95,16 +95,18 @@
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="briefComplet">Brief complet : </label>
-                    <textarea class="shadow appearance-none border rounded w-full bg-white py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="briefComplet" rows="5" placeholder="Décrivez votre brief complet"></textarea>
+                    <textarea class="shadow appearance-none border rounded w-full bg-white py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="briefComplet" rows="5" placeholder="Décrivez votre brief complet" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire."></textarea>
                 </div>
                 <div class="flex justify-center">
-                    <button class=" bg-seed hover:bg-seed-100 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                        Submit
+                    <button class=" bg-seed hover:bg-seed/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Générer le plan de développement
                     </button>
                 </div>    
             </form>
         </div>
     </main>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js"></script>
 </body>
 
 </html>
