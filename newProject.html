@@ -10,7 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <!-- Thème Tailwind : couleurs et polices du site -->
+  <style>
+    .parsley-errors-list {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+    .parsley-error {
+            border-color: red;
+        }
+
+    .parsley-success {
+            border-color: green;
+    
+    }
+    </style>
   <style type="text/tailwindcss">
     @theme {
       --color-bone: #E4E4DE;
@@ -64,7 +79,7 @@
         <dialog id="apiModal"
         class="fixed inset-0 m-auto h-fit w-4/5 max-w-md rounded-lg bg-white p-0 shadow-lg backdrop:bg-black/60 backdrop:backdrop-blur-sm">
             <div class="p-8">
-                <label for="apiKey" class="block mb-2 text-base text-slate-800">Your API</label>
+                <label for="apiKey" class="block mb-2 text-base text-slate-800">Clé API Gemini (gardée dans sessionStorage)</label>
                 <input id="apiKey" type="password" placeholder="Your API" autocomplete="off"
                class="w-full rounded-md border border-slate-200 bg-white px-4 py-3 text-slate-700 placeholder-slate-400 shadow-sm focus:outline-none focus:border-forest">
 
@@ -116,10 +131,14 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="briefComplet">Brief complet : </label>
                     <textarea class="shadow appearance-none border rounded w-full bg-white py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="briefComplet" rows="5" placeholder="Décrivez votre brief complet" data-parsley-required="true" data-parsley-required-message="Ce champ est obligatoire."></textarea>
                 </div>
-                <div class="flex justify-center">
-                    <button  class=" bg-seed hover:bg-seed/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline " type="submit">
+                <div class="flex  gap-5 justify-center">
+                    <button class=" bg-seed hover:bg-seed/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline " type="submit">
                         Générer le plan de développement
                     </button>
+                    <a id="demoBTN" href="projet.html"
+                        class="bg-white rounded font-bold py-2 px-4 hover:bg-lichen">
+                        démo
+                    </a>    
                 </div>    
             </form>
         </div>
